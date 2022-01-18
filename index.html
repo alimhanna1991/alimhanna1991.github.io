@@ -10,31 +10,31 @@
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
+.w3-sidebar {width: 120px;background: rgb(116, 115, 115);}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
-<body class="w3-black">
+<body class="w3-light-grey">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="img/my.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-light-grey">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-light-grey">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <!-- <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <!-- <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-light-grey">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>PHOTOS</p>
   </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-light-grey">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a> -->
@@ -42,7 +42,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+  <div class="w3-bar w3-light-grey w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
     <!-- <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
@@ -53,21 +53,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header class="w3-container w3-padding-32 w3-center w3-light-grey" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Ali Mhanna.</h1>
     <p>Software Engineer - Web and Mobile App Developer</p>
   </header>
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">About Me</h2>
+    <h2 class="w3-text-black">About Me</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>
         
         Software Engineer , Studied at <a href="https://tishreen.edu.sy/">Tishreen University </a> Wortking As Programming Supervisor At <a href="https://www.alwataniya.sy">AlWataniya Bank</a>
         Living In Syria , Born on 16-08-1991 .
+        My main interest is in learing new Techologies , Programming Languages , Frameworks etc .
+
     </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+   
+
+   
+    </div>
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+      <h2 class="w3-text-black">What I use ?</h2>
+      <hr style="width:200px" class="w3-opacity w3-dark-grey">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-circle">
+        <img src="img/ionic.png" style="width:10%">
+        <img src="img/laravel.png" style="width:10%">
+        <img src="img/wp.png" style="width:10%">
+        <img src="img/drupal.png" style="width:10%">
+        <img src="img/php.jpg" style="width:10%">
+        <img src="img/python.png" style="width:10%">
+        <img src="img/js.png" style="width:10%">
+        <img src="img/mysql.png" style="width:10%">
+        <img src="img/html.png" style="width:10%">
+        <img src="img/react.png" style="width:10%">
+      </div>
+      </div>
+    <h3 class="w3-padding-16 w3-text-dark-grey">My Skills</h3>
     <p class="w3-wide">Php , Js , Css , HTML </p>
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:75%"></div>
@@ -108,7 +131,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half w3-margin-bottom">
         <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-light-grey w3-xlarge w3-padding-32">Basic</li>
           <li class="w3-padding-16">Web Design</li>
           <li class="w3-padding-16">Photography</li>
           <li class="w3-padding-16">5GB Storage</li>
@@ -118,14 +141,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <span class="w3-opacity">per month</span>
           </li>
           <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+            <button class="w3-button w3-white w3-padding-large w3-hover-light-grey">Sign Up</button>
           </li>
         </ul>
       </div>
 
       <div class="w3-half">
         <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-light-grey w3-xlarge w3-padding-32">Pro</li>
           <li class="w3-padding-16">Web Design</li>
           <li class="w3-padding-16">Photography</li>
           <li class="w3-padding-16">50GB Storage</li>
@@ -135,7 +158,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <span class="w3-opacity">per month</span>
           </li>
           <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+            <button class="w3-button w3-white w3-padding-large w3-hover-light-grey">Sign Up</button>
           </li>
         </ul>
       </div>
