@@ -1,193 +1,337 @@
 <!DOCTYPE html>
-<html>
-<title>Ali Mhanna Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: rgb(116, 115, 115);}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
-<body class="w3-light-grey">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ali Mhanna - Web Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <!-- <img src="img/my.jpg" style="width:100%"> -->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-light-grey">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-light-grey">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <!-- <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-light-grey">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PHOTOS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-light-grey">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a> -->
-</nav>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            position: relative;
+            background-color: #fff; /* White background */
+            color: #000; /* Black font */
+            overflow-x: hidden;
+            margin: 0;
+        }
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-light-grey w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <!-- <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a> -->
-  </div>
-</div>
+        /* Background styles */
+        .background {
+            position: fixed; /* Make it fixed so it doesn't interfere with page scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-light-grey" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Ali Mhanna.</h1>
-    <p>Software Engineer - Web and Mobile App Developer</p>
-  </header>
+        .binary-stream {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: monospace;
+            font-size: 1.5rem;
+            color: rgba(0, 255, 0, 0.7);
+            white-space: nowrap;
+            user-select: none;
+            animation: scrollBinary 10s linear infinite;
+        }
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-black">About Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p class="w3-text-black">
-        
-        Software Engineer , Studied at <a href="https://tishreen.edu.sy/">Tishreen University </a> Wortking As Head of Programming Dept At <a href="https://www.alwataniya.sy">AlWataniya Bank</a>
-        Living In Syria , Born on 16-08-1991 .
-        My main interest is in learing new Techologies , Programming Languages , Frameworks etc .
+        @keyframes scrollBinary {
+            from {
+                top: -100%;
+            }
+            to {
+                top: 100%;
+            }
+        }
 
-    </p>
-   
+        /* Header Section */
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 3rem;
+            position: relative;
+            z-index: 10;
+        }
 
-   
+        header h1 {
+            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+            animation: fadeIn 2s ease;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        header nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        header nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        header nav a:hover {
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Fade-in animation for header */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+            background-color: #fff; /* White background */
+            text-align: center;
+            color: #000; /* Black font */
+        }
+
+        #projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .project {
+            background-color: #e74c3c; /* Red box background */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .project h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .project p {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 4rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: #f5f4f4;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .contact a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .contact a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .contact a:hover {
+            color: #1e1e1e;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8); /* Green background */
+            color: #fff; /* White font */
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Background with binary stream effect -->
+    <div class="background">
+        <div class="binary-stream" id="binary-background"></div>
     </div>
-    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-      <h2 class="w3-text-black">What I use ?</h2>
-      <hr style="width:200px" class="w3-opacity w3-dark-grey">
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-circle">
-        <img src="img/ionic.png" style="width:10%">
-        <img src="img/laravel.png" style="width:10%">
-        <img src="img/wp.png" style="width:10%">
-        <img src="img/drupal.png" style="width:10%">
-        <img src="img/php.jpg" style="width:10%">
-        <img src="img/python.png" style="width:10%">
-        <img src="img/js.png" style="width:10%">
-        <img src="img/mysql.png" style="width:10%">
-        <img src="img/html.png" style="width:10%">
-        <img src="img/react.png" style="width:10%">
-      </div>
-      </div>
-    <h3 class="w3-padding-16 w3-text-dark-grey">My Skills</h3>
-    <p class="w3-wide">Php , Js , Css , HTML ,Typescript</p>
-    <div class="w3-white ">
-      <div class="w3-dark-grey" style="height:28px;width:75%"></div>
-    </div>
-    <p class="w3-wide">Os's (linux , Windows) </p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:70%"></div>
-    </div>
-    <p class="w3-wide">Typescript , Python  , React </p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-    </div><br>
-    <p class="w3-wide">Laravel , Drupal , Wordpress </p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:70%"></div>
-    </div><br>
-    
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">10+</span><br>
-       Web App Projects Done 
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">3</span><br>
-        Mobile Apps 
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">7</span><br>
-       Websites
-      </div>
-      
-    </div>
-    <div class="w3-half">
-      <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-light-grey w3-xlarge w3-padding-32">Contact</li>
-          <a href="tel:++963932441417"><li class="w3-padding-16"> <i class="fa fa-phone w3-hover-opacity"></i>Mobile : +963 932 441417</li></a>
-         <a href="mailto:ali.m.mhanna@gmail.com"> <li class="w3-padding-16"> E-mail : ali.m.mhanna@gmail.com</li></a>
-         
-      </ul>
-    </div>
-    
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-light-grey w3-xlarge w3-padding-32">See Me On :</li>
-          
-          <a href="https://www.facebook.com/ali.m.mhna/">    <li class="w3-padding-16"><i class="fa fa-facebook-official w3-hover-opacity"></i></li></a>
-          <a href="https://www.instagram.com/ali.m.mhanna/">  <li class="w3-padding-16"> <i class="fa fa-instagram w3-hover-opacity"></i></li></a>
-          <a href="https://www.linkedin.com/in/ali-mhanna-dev/"> <li class="w3-padding-16"><i class="fa fa-linkedin w3-hover-opacity"></i> </li></a>
 
-        </ul>
-      </div>
-    
-    <!-- Grid for pricing tables
-    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-light-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-light-grey">Sign Up</button>
-          </li>
-        </ul>
-      </div>
+    <!-- Header Section -->
+    <header>
+        <h1>Ali Mhanna</h1>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-light-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-light-grey">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    End Grid/Pricing tables 
-    </div> -->
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <!-- Project 1: AlWataniya MF Bank Website -->
+            <div class="project">
+                <h3>AlWataniya MF Bank Website</h3>
+                <p>Developed and maintained the official website for AlWataniya MF Bank, built using Drupal. <a href="https://www.alwataniya.sy" target="_blank">Visit Website</a></p>
+            </div>
 
+            <!-- Project 2: AlWataniya MF Bank Portal -->
+            <div class="project">
+                <h3>AlWataniya MF Bank Portal</h3>
+                <p>Created a customer and employee portal for AlWataniya MF Bank, implemented with Drupal CMS.</p>
+            </div>
 
+            <!-- Project 3: AlWataniya MF Bank HRMS -->
+            <div class="project">
+                <h3>AlWataniya MF Bank HRMS</h3>
+                <p>Designed and built an HR Management System for AlWataniya MF Bank to streamline HR processes.</p>
+            </div>
+
+            <!-- Project 4: AlWataniya MF Bank ERP -->
+            <div class="project">
+                <h3>AlWataniya MF Bank ERP</h3>
+                <p>Developed and integrated an Enterprise Resource Planning system for AlWataniya MF Bank to optimize operations.</p>
+            </div>
+
+            <!-- Project 5: Golden Beach Hotel Website -->
+            <div class="project">
+                <h3>Golden Beach Hotel Website</h3>
+                <p>Developed a fully responsive and interactive website for Golden Beach Hotel, focusing on user experience and mobile optimization.</p>
+            </div>
+
+            <!-- Project 6: AlWataniya MF Bank Internet Banking -->
+            <div class="project">
+                <h3>AlWataniya MF Bank Internet Banking</h3>
+                <p>Developed and launched the AlWataniya MF Bank Internet Banking portal. <a href="https://online.alwataniya.sy/IBS" target="_blank">Visit Website</a></p>
+            </div>
+
+            <!-- Project 7: BBSFMF Mobile App -->
+            <div class="project">
+                <h3>BBSFMF Mobile App</h3>
+                <p>Built a mobile app using Flutter for front-end development and Laravel for backend API integration for BBSFMF.</p>
+            </div>
+
+            <!-- Project 8: BBSFMF Website -->
+            <div class="project">
+                <h3>BBSFMF Website</h3>
+                <p>Developed a website for BBSFMF using modern web technologies and a responsive layout to improve user engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>If you'd like to get in touch, feel free to reach out to me through any of the following:</p>
+        <div class="contact">
+            <a href="mailto:ali.m.mhanna@gmail.com">Email: ali.m.mhanna@gmail.com</a>
+            <a href="https://www.linkedin.com/in/ali-mhanna-dev/">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Ali Mhanna. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Generate the binary content for the animation
+        const binaryStream = document.getElementById('binary-background');
+        let binaryString = '';
+
+        // Generate a large binary string for the effect
+        function generateBinaryString() {
+            let str = '';
+            for (let i = 0; i < 5000; i++) {
+                str += Math.random() > 0.5 ? '1' : '0';
+            }
+            return str;
+        }
+
+        // Add the binary string to the stream
+        binaryStream.innerHTML = generateBinaryString();
+    </script>
 
 </body>
 </html>
